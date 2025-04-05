@@ -1,0 +1,491 @@
+/* --- Reset Básico e Estilos Gerais --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Variáveis de Cor (Sugestão) --- */
+:root {
+  --cor-fundo-claro: #fdf6e9; /* Um creme mais quente/envelhecido */
+  --cor-bege-suave: #eaddc0; /* Bege um pouco mais 'kraft' */
+  --cor-marrom-medio: #a07d5a; /* Marrom médio, tipo caramelo/madeira clara */
+  --cor-marrom-escuro: #5c3a21; /* Marrom chocolate/café */
+  --cor-marrom-texto: #4e3e31; /* Marrom bem escuro para texto principal */
+  --cor-whatsapp: #2ec666;
+  --cor-whatsapp-hover: #128c7e;
+  --cor-branco: #ffffff;
+  --cor-texto-claro: var(--cor-fundo-claro); /* Texto sobre fundos escuros */
+}
+
+body {
+  /* Fonte principal (corpo do texto) */
+  font-family: 'Lato', sans-serif;
+  line-height: 1.7; /* Um pouco mais de espaço entre linhas */
+  color: var(--cor-marrom-texto);
+  background-color: var(--cor-fundo-claro);
+  /* Opcional: Textura sutil no fundo */
+  /* background-image: url('path/to/subtle-linen-texture.png'); */
+}
+
+.container {
+  max-width: 1100px; /* Leve ajuste */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Tipografia --- */
+h1, h2, h3 {
+  /* Fonte dos títulos */
+  font-family: 'Playfair Display', serif;
+  color: var(--cor-marrom-escuro);
+  line-height: 15px.3; /* Ajuste para fontes serifadas */
+}
+
+/* --- Cabeçalho (Hero Section) --- */
+header {
+  background-color: var(--cor-bege-suave);
+  padding: 15px 0 50px 0;
+  text-align: center;
+  border-bottom: 4px solid var(--cor-marrom-medio); /* Borda mais grossa e cor diferente */
+}
+
+header .logo {
+  max-width: 300px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 3.8em; /* Aumentar um pouco com a nova fonte */
+  margin-bottom: 10px;
+}
+
+header h2 {
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.15em;
+  color: var(--cor-marrom-texto); /* Usar o marrom mais escuro para texto */
+  margin-bottom: 35px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Botão Principal (WhatsApp) --- */
+.cta-button {
+  display: inline-block;
+  background-color: var(--cor-whatsapp);
+  color: var(--cor-branco);
+  padding: 15px 35px; /* Mais padding horizontal */
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 700; /* Lato Bold */
+  /* Cantos mais arredondados para suavizar */
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+  /* Sombra sutil para destacar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px; /* Leve espaçamento */
+}
+
+.cta-button:hover {
+  background-color: var(--cor-whatsapp-hover);
+  transform: translateY(-2px) scale(1.03); /* Leve levantada e zoom */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button i {
+  margin-right: 10px; /* Mais espaço para ícone */
+}
+
+/* --- Seções de Conteúdo --- */
+section {
+  padding: 50px 0; 
+  text-align: center;
+  /* Opcional: borda superior sutil entre seções claras */
+  /* border-top: 1px dashed var(--cor-bege-suave); */
+}
+  /* Remover borda da primeira seção */
+main section:first-of-type {
+    border-top: none;
+}
+
+section h2 {
+  font-size: 2.4em;
+  margin-bottom: 40px; /* Mais espaço abaixo do H2 */
+  position: relative;
+  display: inline-block;
+}
+
+/* Linha decorativa mais 'orgânica' */
+section h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: var(--cor-marrom-medio);
+  margin: 10px auto 0;
+  border-radius: 2px; /* Levemente arredondada */
+}
+
+section p {
+  font-size: 1.15em; /* Leve aumento */
+  color: var(--cor-marrom-texto);
+  max-width: 720px;
+  margin: 0 auto 25px auto;
+}
+
+/* Estilizando a lista de destaques */
+#produtos ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#produtos li {
+  margin-bottom: 18px;
+  font-size: 1.1em;
+  position: relative;
+  padding-left: 35px;
+  text-align: left;
+  max-width: 500px;
+  width: 100%;  
+  color: var(--cor-marrom-escuro); /* Cor mais escura para itens da lista */
+}
+
+#produtos li::before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900; /* Solid icons geralmente usam 900 */
+  content: "\f1fd";
+  position: absolute;
+  left: 0px;
+  font-size: 1.2em;
+  color: var(--cor-marrom-medio);
+}
+
+#quem-somos {
+  padding:30px 0 0 0;
+}
+#quem-somos p{
+  text-indent: 2em;
+  text-align: justify;
+}
+#produtos {
+  padding: 20px;
+}
+#produtos p{
+  text-indent: 2em;
+  text-align: justify;
+}
+
+/* --- Seção Galeria de Bolos --- */
+#galeria {
+  background-color: var(--cor-branco); /* Fundo branco para destacar fotos */
+  border-top: 1px solid var(--cor-bege-suave);
+  border-bottom: 1px solid var(--cor-bege-suave);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.gallery-item img {
+  width: 100%;
+  /* height: 280px; */
+  object-fit: cover;
+  border-radius: 10px; /* Cantos mais arredondados */
+  /* Sombra mais suave e quente */
+  box-shadow: 0 5px 15px rgba(92, 58, 33, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid var(--cor-branco); /* Pequena borda branca interna */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(92, 58, 33, 0.2);
+}
+
+/* --- Seção "Por Que Escolher" --- */
+  #por-que {
+    background-color: var(--cor-fundo-claro); /* Mesmo fundo do body */
+  }
+#por-que .reasons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+#por-que .reason-item {
+  background-color: var(--cor-branco);
+  /* Borda sutil que remete a papel/cartão */
+  border: 1px solid var(--cor-bege-suave);
+  border-radius: 10px;
+  padding: 30px 25px;
+  box-shadow: 0 3px 8px rgba(92, 58, 33, 0.08); /* Sombra ainda mais suave */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#por-que .reason-item:hover {
+    transform: translateY(-5px); /* Levanta um pouco no hover */
+    box-shadow: 0 6px 15px rgba(92, 58, 33, 0.12);
+}
+
+#por-que .reason-item h3 {
+  color: var(--cor-marrom-escuro);
+  margin-bottom: 15px;
+  font-size: 1.4em; /* Título um pouco maior */
+}
+  #por-que .reason-item p {
+      color: var(--cor-marrom-texto);
+      margin-bottom: 0px;
+      line-height: 1.6;
+  }
+
+/* Seção de Contato Final */
+#contato {
+  background-color: var(--cor-bege-suave); /* Mesmo fundo do header */
+  border-top: 4px solid var(--cor-marrom-medio); /* Mesma borda do header */
+  padding-top: 70px; /* Mais padding */
+  padding-bottom: 80px;
+}
+  #contato h2 {
+      color: var(--cor-marrom-escuro);
+  }
+  #contato p {
+      color: var(--cor-marrom-texto);
+  }
+
+/* --- Rodapé --- */
+footer {
+  background-color: var(--cor-marrom-escuro); /* Marrom escuro mais rico */
+  color: var(--cor-texto-claro); /* Texto claro sobre fundo escuro */
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9em;
+  font-weight: 400; /* Lato Regular */
+  letter-spacing: 0.3px;
+}
+footer p {
+    color: var(--cor-texto-claro); /* Garantir cor do texto no footer */
+    margin-bottom: 5px; /* Espaço entre parágrafos no footer se houver mais */
+    opacity: 0.9; /* Leve transparência para suavizar */
+}
+footer a { /* Se adicionar links no footer */
+    color: var(--cor-bege-suave);
+    text-decoration: underline;
+}
+footer a:hover {
+    color: var(--cor-branco);
+}
+
+/* --- Estilos do Lightbox --- */
+.lightbox {
+  position: fixed; /* Fica fixo na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 20, 10, 0.85); /* Fundo escuro semi-transparente (tom marrom) */
+  z-index: 1000; /* Garante que fique por cima de tudo */
+  display: flex; /* Usar flexbox para centralizar a imagem */
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Começa invisível para transição */
+  visibility: hidden; /* Começa inacessível */
+  transition: opacity 0.4s ease, visibility 0s linear 0.4s; /* Transição suave */
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease; /* Transição ao aparecer */
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 85%;
+  background-color: var(--cor-branco); /* Opcional: fundo branco para a imagem */
+  padding: 10px; /* Espacinho ao redor da imagem */
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+#lightbox-img {
+  display: block; /* Remove espaço extra abaixo da imagem */
+  max-width: 100%;
+  max-height: calc(85vh - 40px); /* Limita altura baseada na viewport menos paddings */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Garante que a imagem inteira apareça sem distorção */
+  border-radius: 3px;
+}
+
+/* Botões de Controle */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background-color: rgba(50, 30, 20, 0.7); /* Fundo dos botões */
+  color: var(--cor-fundo-claro);
+  border: none;
+  padding: 0; /* Reset padding */
+  cursor: pointer;
+  font-size: 24px; /* Tamanho dos ícones/texto */
+  line-height: 40px; /* Altura da linha para centralizar */
+  width: 40px; /* Largura fixa */
+  height: 40px; /* Altura fixa */
+  border-radius: 50%; /* Botões redondos */
+  transition: background-color 0.3s ease;
+  z-index: 1001; /* Acima da imagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background-color: rgba(92, 58, 33, 0.9); /* Marrom mais escuro no hover */
+}
+
+.lightbox-close {
+  top: 15px;
+  right: 15px;
+  font-size: 30px; /* 'X' maior */
+}
+
+.lightbox-prev {
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+.lightbox-next {
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+/* Desabilitar botões (ex: primeiro/último item) */
+.lightbox-prev[disabled],
+.lightbox-next[disabled] {
+  opacity: 0.5;
+  cursor: default;
+  background-color: rgba(50, 30, 20, 0.4);
+}
+
+
+/* Tablets e Telas Médias (ex: <= 992px) */
+@media (max-width: 992px) {
+  .container {
+      max-width: 95%;
+  }
+
+  header {
+    padding-bottom: 30px;
+  }
+  header h1 {
+      font-size: 3.2em;
+  }
+  section h2 {
+      font-size: 2.1em;
+  }
+  #quem-somos {
+    padding:20px 0 0 0;
+  }
+  #produtos {
+    padding: 10px;
+  }
+  #por-que .reasons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablets Pequenos e Celulares Grandes (ex: <= 768px) */
+@media (max-width: 768px) {
+  body {
+      line-height: 1.6; /* Ajustar se necessário */
+  }
+  header {
+    padding-bottom: 20px;
+  }
+  header h1 {
+    font-size: 2.9em;
+  }
+  .cta-button {
+    font-size: 1em;
+    padding: 14px 30px;
+  }
+
+  #produtos li {
+    text-align: center;
+    padding-left: 0;
+    max-width: 90%;
+  }
+  #produtos li::before {
+    position: static;
+    display: block;
+    margin-bottom: 8px; /* Mais espaço para o ícone acima */
+    text-align: center;
+  }
+
+  #por-que .reasons {
+    grid-template-columns: 1fr; /* Uma coluna */
+    gap: 15px;
+  }
+  #por-que .reason-item {
+    padding: 20px;
+  }
+  #por-que .reason-item h3 {
+    margin-bottom: 5px;
+  }
+
+  .lightbox-prev, .lightbox-next {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 20px;
+  }
+  .lightbox-close {
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 24px;
+  }
+  .lightbox-content {
+      padding: 5px;
+  }
+}
+
+/* Celulares Pequenos (ex: <= 576px) */
+@media (max-width: 576px) {
+  header .logo {
+      max-width: 60%;
+      margin-bottom: 10px;
+  }
+
+  #contato {
+      padding-top: 60px;
+      padding-bottom: 70px;
+  }
+  footer {
+      padding: 25px 0;
+  }
+}
